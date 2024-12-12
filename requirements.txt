@@ -2,3 +2,4 @@ Flask
 spacy
 scikit-learn
 nltk
+gunicorn
