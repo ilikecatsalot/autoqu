@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, send_from_directory
+from flask_cors import CORS 
 import spacy
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
@@ -12,7 +13,7 @@ nltk.download('stopwords')
 
 # Initialize Flask app
 app = Flask(__name__)
-
+CORS(app)
 # Ensure spaCy model is downloaded
 def ensure_spacy_model():
     model_name = "en_core_web_md"
